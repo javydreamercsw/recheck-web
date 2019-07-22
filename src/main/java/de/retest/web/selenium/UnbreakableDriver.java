@@ -27,6 +27,7 @@ import org.openqa.selenium.internal.FindsByTagName;
 import org.openqa.selenium.internal.FindsByXPath;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import de.retest.recheck.report.ActionReplayResult;
 import de.retest.recheck.ui.descriptors.Element;
 import de.retest.recheck.ui.descriptors.RootElement;
 import de.retest.web.RecheckWebImpl;
@@ -47,6 +48,7 @@ public class UnbreakableDriver implements WebDriver, JavascriptExecutor, FindsBy
 	private final RemoteWebDriver wrapped;
 	private RootElement lastExpectedState;
 	private RootElement lastActualState;
+	private ActionReplayResult lastActionReplayResult;
 
 	/**
 	 * @param wrapped
